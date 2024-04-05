@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     text-decoration: none;
     color: #ddd;
+    list-style: none;
 
     --red_color: rgb(238, 39, 54);
 }
