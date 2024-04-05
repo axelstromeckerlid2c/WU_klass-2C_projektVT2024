@@ -2,11 +2,35 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    color: #ddd;
+
+    --red_color: rgb(238, 39, 54);
 }
 
+body {
+    background-color: rgb(64, 64, 64);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+img {
+    border-radius: 5px;
+}
+
+
 header {
-    background-color: aquamarine;
-    height: 100px;
+    background-color: rgb(90, 90, 90);
+    height: 130px;
+    padding: 30px;
 }
 
 #area_nav {
@@ -14,51 +38,90 @@ header {
 }
 
 nav {
-    display: flex;
-    flex-direction: row;
-    height: 50px;
     background-color: rgba(255, 0, 0, 0.5);
 }
 
-nav a {
-    margin-left: 30px;
+
+.main_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    text-transform: uppercase;
+}
+
+.main_nav a {
+    height: fit-content;
+}
+
+.main_nav a img {
+    height: 45px;
+    width: auto;
 }
 
 #grid_wrapper {
     display: grid;
     height: fit-content;
-    background-color: cadetblue;
+    background-color: rgb(64, 64, 64);
 }
 
 #highlighted {
-    background-image: url(../img/place_holder.jpg);
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/try.jpg);
     background-size: cover;
     height: 80vh;
+    width: all;
+    background-color: rgb(41, 41, 41);
+    margin: 50px 150px 50px 100px;
+    position: relative;
+    align-items: flex-start;
+    justify-content: end;
 }
 
-.single_part {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: aqua;
-    padding: 40px;
-    margin-top: 20px;
+#highlighted h3 {
+    font-size: 2rem;
+    color: #ddd;
+    z-index: 50;
+    margin-bottom: 30px;
+    margin-left: 50px;
 }
 
-.single_part img {
-    height: 500px;
-    width: auto;
+#highlighted p {
+    z-index: 50;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.fade_image {
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(rgba(64, 64, 64,0),rgba(64, 64, 64,1));
+    position: absolute;
+    bottom: 0;
 }
 
 .news {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 300px 300px;
+    grid-template-rows: 350px 350px;
     grid-template-areas:
     "se1 se2 arc"
     "se3 se4 arc"
     ;
+    padding: 50px;
+}
+
+.news_section {
+    justify-content: end;
+    align-items: flex-end;
+    margin-top: 50px;
 }
 
 .news_section img {
@@ -68,7 +131,7 @@ nav a {
 
 .news_section {
     height: 100%;
-    width: 100%;
+    width: 300px;
 }
 
 #news_section_1 {
@@ -91,5 +154,334 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-evenly;
+    background-color: rgb(64, 64, 64);
+    height: 650px;
+    padding: 30px;
+}
+
+#more_news h3 {
+    text-transform: uppercase;
+}
+
+#more_news ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: fit-content;
+    width: 100%;
+    background-color: rgb(84, 84, 84);
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: grey;
+    border-style: solid;
+    padding: 20px;
+}
+
+#more_news ul section {
+    border-width: 0px 0px 0px 2px;
+    border-color: var(--red_color);
+    border-style: solid;
+    margin: 30px;
+    padding-left: 5px;
+}
+
+.calender {
+    display: grid;
+    height: 100%;
+    padding: 50px;
+}
+
+.calender h2 {
+    font-size: 3rem;
+}
+
+.calender ul {
+    display: flex;
+}
+
+.calender ul a {
+    width: 100%;
+    height: 200px;
+    padding: 50px;
+    border-width: 0px 2px 0px 2px;
+    border-color: grey;
+    border-style: solid;
+    margin: 10px;
+}
+
+.become_member {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    background-color:rgb(238, 39, 54);
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 50%;
+}
+
+
+/*
+För medlemmar
+*/
+
+.page_header {
+    font-size: 4rem;
+    padding: 100px;
+    background-color: rgb(84, 84, 84);
+}
+
+.part_header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+
+.members_highlighted{
+    height: 500px;
+    width: 100%;
+    padding: 100px;
+}
+
+.members_highlighted div {
+    border-width: 0px 0px 0px 3px;
+    border-style: solid;
+    border-color: var(--red_color);
+    padding-left: 10px;
+}
+
+.members_highlighted p {
+    margin-top: 50px;
+}
+
+#our_events {
+    height: 500px;
+    padding: 100px;
+}
+
+
+
+#event_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+#event_list a {
+    width: max-content;
+    height: 10px;
+}
+
+.divider {
+    flex-grow: 1;
+    border-bottom: 1.5px solid black;
+    margin: 15px 50px 50px 50px;
+}
+
+#help_us {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+#help_us a {
+    background-color: var(--red_color);
+    padding: 30px;
+    width: fit-content;
+    height: min-content;
+    border-radius: 5px;
+}
+
+
+/*
+Aktiviteter
+*/
+
+
+#sec_calender {
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    height: 800px;
+    padding: 40px;
+}
+
+
+#sec_calender section{
+    border-width: 0px 0px 0px 3px;
+    border-color: var(--red_color);
+    border-style: solid;
+    padding-left: 5px;
+}
+
+
+#sec_calender div {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+
+}
+
+#sec_calender h4 {
+    font-size: 1rem;
+}
+
+#sec_calender div .when{
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+#sec_calender div .what{
+    font-weight: bolder;
+    margin-right: 5px;
+
+}
+
+#sec_calender div .who{
+    font-weight: normal;
+    margin-right: 5px;
+
+}
+
+#sec_calender div .where{
+    font-weight: lighter;
+    margin-right: 5px;
+    font-size: 0.7rem;
+}
+
+#sign_up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+
+#sign_up div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 50px;
+}
+
+#sign_up div .sign_up_section {
+    height: 250px;
+    width: 100%;
+    margin: 0px 30px 0px 30px;
+}
+
+.section_tint {
+    display: flex;
+    background-color: rgba(238, 39, 54, 0.7);
+    justify-content: left;
+    width: 50%;
+    height: 100%;
+    margin: 0px;
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
+#competitions {
+    background-image: url(../img/competitions.jpg);
+    background-size: cover;
+}
+
+#trainings {
+    background-image: url(../img/trainings.jpg);
+    background-size: cover;
+}
+
+#other_events {
+    background-image: url(../img/other.jpg);
+    background-size: cover;
+}
+
+/*
+OM
+*/
+
+.about_part {
+    padding: 0px 250px 100px 250px;
+}
+
+.about_part p {
+    margin-top: 50px;
+}
+
+.our_vision {
+    display: flex;
+    justify-content: space-around;
+}
+
+.our_vision_part {
+    background-color: rgb(84, 84, 84);
+    width: 100%;
+    height: 500px;
+    margin: 100px;
+    padding: 40px;
+    border-radius: 5px;
+}
+
+
+.our_vision_part p {
+    border-width: 0px 0px 0px 3px;
+    border-color: var(--red_color);
+    border-style: solid;
+    margin-top: 50px;
+    padding-left: 20px;
+}
+
+
+footer {
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(84, 84, 84);
+}
+
+
+.about_us {
+    color: #ddd;
+    height: auto;
+    width: fit-content;
+    background-color: red;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.reach_us {
+    color: #ddd;
+}
+
+footer p {
+    margin-top: 30px;
+}
+
+footer a {
+    width: fit-content;
+    background-color: white;
+}
+
+footer h2 {
+    width: fit-content;
+    padding: 10px;
+}
+
+@media screen and (min-width: 800px) {
+
 }
