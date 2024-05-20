@@ -15,10 +15,17 @@
     <div id="grid_wrapper">
         <nav class="main_nav">
             <a href="index.html"><img src="img/logo.png" alt="saik logo"></a>
-            <a href="activities.html">aktiviteter</a>
-            <a href="for_members.html">För medlemmar</a>
-            <a href="about.html">OM ORIENTERINGSSEKTIONEN</a>
-            <a href=""><img src="img/user_profile.png" alt="logga in"></a>
+            <ul id="link_list">
+                <li><a href="activities.html">aktiviteter</a></li>
+                <li><a href="for_members.html">För medlemmar</a></li>
+                <li><a href="about.html">OM Oss</a></li>
+                <li><a href="" class="log_in"><img src="img/user_profile.png" alt="logga in"><p>logga in</p></a></li>
+            </ul>
+            <section id="burger">
+                <div id="burger_line_1" class="burger_line"></div>
+                <div id="burger_line_2" class="burger_line"></div>
+                <div id="burger_line_3" class="burger_line"></div>
+            </section>
         </nav>
         <section id="highlighted">
             <h3>
@@ -95,41 +102,78 @@
         </div>
         <div class="calender">
             <h2>Kalender</h3>
-            <ul class="calender_list">
-                <a href="">
+            <section class="calender_list" id="mobile_calender">
+                <section>
                     <h4>Måndag</h4>
-                    <p>18:00 Träning ungdomar</p>
-                </a>
-                <a href="">
-                    <h4>Tisdag</h4>
-                    <p>18:00 Träning ungdomar</p>
-                </a>
-                <a href="">
-                    <h4>Onsdag</h4>
-                    <p>18:00 Träning ungdomar</p>
-                </a>
-                <a href="">
-                    <h4>Torsdag</h4>
-                    <p>18:00 Träning ungdomar</p>
-                </a>
-            </ul>
-            <ul class="calender_list">
-                <a href="">
-                    <h4>Fredag</h4>
-                    <p>18:00 Träning ungdomar</p>
-                </a>
-                <a href="">
-                    <h4>Lördag</h4>
-                    <p>18:00 Träning ungdomar</p>
-                </a>
-                <a href="">
-                    <h4>Söndag</h4>
-                    <p>18:00 Träning ungdomar</p>
-                </a>
-                <a href="activities.html#sec_calender">
-                    <h4>Till kalendern</h4>
-                </a>
-            </ul>
+                    <ul>
+                        <li><p class="when">18:00</p></li>
+                        <li><p class="what">TRÄNING</p></li>
+                        <li><p class="who">ungdomar</p></li>
+                        <li><p class="where">SAIK-stugan</p></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Måndag</h4>
+                    <ul>
+                        <li><p class="when">18:00</p></li>
+                        <li><p class="what">TRÄNING</p></li>
+                        <li><p class="who">ungdomar</p></li>
+                        <li><p class="where">SAIK-stugan</p></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Måndag</h4>
+                    <ul>
+                        <li><p class="when">18:00</p></li>
+                        <li><p class="what">TRÄNING</p></li>
+                        <li><p class="who">ungdomar</p></li>
+                        <li><p class="where">SAIK-stugan</p></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Måndag</h4>
+                    <ul>
+                        <li><p class="when">18:00</p></li>
+                        <li><p class="what">TRÄNING</p></li>
+                        <li><p class="who">ungdomar</p></li>
+                        <li><p class="where">SAIK-stugan</p></li>
+                    </ul>
+                </section>
+            </section>
+            <section class="calender_list" id="mobile_calender">
+                <section>
+                    <h4>Måndag</h4>
+                    <ul>
+                        <li><p class="when">18:00</p></li>
+                        <li><p class="what">TRÄNING</p></li>
+                        <li><p class="who">ungdomar</p></li>
+                        <li><p class="where">SAIK-stugan</p></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Måndag</h4>
+                    <ul>
+                        <li><p class="when">18:00</p></li>
+                        <li><p class="what">TRÄNING</p></li>
+                        <li><p class="who">ungdomar</p></li>
+                        <li><p class="where">SAIK-stugan</p></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Måndag</h4>
+                    <ul>
+                        <li><p class="when">18:00</p></li>
+                        <li><p class="what">TRÄNING</p></li>
+                        <li><p class="who">ungdomar</p></li>
+                        <li><p class="where">SAIK-stugan</p></li>
+                    </ul>
+                </section>
+                <section>
+                    <a href="activities.html#sec_calender">
+                        <h4>Till kalendern</h4>
+                    </a>
+                </section>
+            </section>
         </div>
     </div>
     <a href="*" class="become_member">Bli medlem</a>
@@ -145,4 +189,5 @@
         </section>
     </footer>
 </body>
+<script src="js/script.js"></script>
 </html>
