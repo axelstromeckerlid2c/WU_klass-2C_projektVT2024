@@ -11,6 +11,8 @@
     --burgerline_width: 30px;
     --burgerline_height: 6px;
     --burgerline_margin: 5px;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -24,6 +26,7 @@ a {
 a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
+    filter: brightness(0.9);
 }
 
 img {
@@ -32,9 +35,31 @@ img {
 
 
 header {
-    background-color: rgb(90, 90, 90);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url(../img/forest.jpg);
+    background-size: 50vw;
+    background-position: right;
     height: 130px;
-    padding: 30px;
+    margin: 0px;
+    padding: 0px;
+}
+
+header section {
+    width: 50vw;
+    margin: 0px;
+    padding: 20px;
+}
+
+header section h1 {
+    font-size: 2.5rem;
+}
+
+header div {
+    width: 60vw;
+    height: 100%;
+    background: linear-gradient(to left, rgba(64, 64, 64,0.3),rgba(64, 64, 64,1));
 }
 
 #area_nav {
@@ -42,7 +67,7 @@ header {
 }
 
 nav {
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: rgba(255, 0, 0, 0.7);
 }
 
 
@@ -50,6 +75,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     height: 50px;
     width: 100%;
     position: sticky;
@@ -57,12 +83,13 @@ nav {
     left: 0px;
     z-index: 100;
     text-transform: uppercase;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 90px;
 }
 
 .main_nav a {
     height: fit-content;
+    width: fit-content;
+    background-color: none;
 }
 
 .main_nav a img {
@@ -89,11 +116,11 @@ nav {
     background-color: rgb(64, 64, 64);
 }
 
-#highlighted {
+.highlighted {
     display: flex;
     flex-direction: column;
-    background-image: url(../img/try.jpg);
     background-size: cover;
+    background-position: center center;
     height: 80vh;
     width: all;
     background-color: rgb(41, 41, 41);
@@ -103,7 +130,11 @@ nav {
     justify-content: end;
 }
 
-#highlighted h3 {
+#index_highlighted {
+    background-image: url(../img/try.jpg);
+}
+
+.highlighted h3 {
     font-size: 2rem;
     color: #ddd;
     z-index: 50;
@@ -111,7 +142,7 @@ nav {
     margin-left: 50px;
 }
 
-#highlighted p {
+.highlighted p {
     z-index: 50;
     margin-bottom: 20px;
     margin-left: 50px;
@@ -226,7 +257,7 @@ nav {
     height: 200px;
     padding: 50px;
     border-width: 0px 2px 0px 2px;
-    border-color: grey;
+    border-color: var(--red_color);
     border-style: solid;
     margin: 10px;
 }
@@ -235,13 +266,33 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
-    width: 100px;
-    background-color:rgb(238, 39, 54);
+    background-color:var(--red_color);
     position: fixed;
-    bottom: 5px;
-    right: 5px;
+    height: fit-content;
+    width: fit-content;
+    bottom: 30px;
+    right: 15px;
     border-radius: 50%;
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.become_member:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: var(--red_color);
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -10.0px;
+    margin-bottom: -20px;
 }
 
 
@@ -250,8 +301,12 @@ För medlemmar
 */
 
 .page_header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     font-size: 4rem;
-    padding: 100px;
+    padding-left: 100px;
+    height: 300px;
     background-color: rgb(84, 84, 84);
 }
 
@@ -265,46 +320,36 @@ För medlemmar
     text-transform: uppercase;
 }
 
-.members_highlighted{
-    height: 500px;
-    width: 100%;
-    padding: 100px;
-}
-
-.members_highlighted div {
-    border-width: 0px 0px 0px 3px;
-    border-style: solid;
-    border-color: var(--red_color);
-    padding-left: 10px;
-}
-
-.members_highlighted p {
-    margin-top: 50px;
+#for_members_highlighted{
+    background-image: url(../img/place_holder.jpg);
 }
 
 #our_events {
-    height: 500px;
+    height: fit-content;
     padding: 100px;
 }
-
-
 
 #event_list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding-top: 100px;
+    background-color: none;
 }
 
 #event_list a {
-    width: max-content;
-    height: 10px;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--red_color);
+    padding: 50px;
+    border-radius: 5px;
 }
 
 .divider {
     flex-grow: 1;
     border-bottom: 1.5px solid black;
-    margin: 15px 50px 50px 50px;
+    margin: 0px 20px 0px 20px;
 }
 
 #help_us {
@@ -313,14 +358,24 @@ För medlemmar
     padding: 100px;
     justify-content: center;
     align-items: center;
+    height: fit-content;
 }
 
+
+
 #help_us a {
+    display: flex;
+    justify-content: center;
     background-color: var(--red_color);
     padding: 30px;
     width: fit-content;
     height: min-content;
     border-radius: 5px;
+}
+
+#help_us a:hover {
+    filter: brightness(0.9);
+    opacity: 1;
 }
 
 
@@ -407,7 +462,8 @@ Aktiviteter
     display: flex;
     background-color: rgba(238, 39, 54, 0.7);
     justify-content: left;
-    width: 50%;
+    max-width: 50%;
+    min-width: fit-content;
     height: 100%;
     margin: 0px;
     padding-left: 20px;
@@ -449,7 +505,7 @@ OM
 .our_vision_part {
     background-color: rgb(84, 84, 84);
     width: 100%;
-    height: 500px;
+    height: fit-content;
     margin: 100px;
     padding: 40px;
     border-radius: 5px;
@@ -466,30 +522,15 @@ OM
 
 
 footer {
-    height: 400px;
+    height: fit-content;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    flex-direction: row;
     background-color: rgb(84, 84, 84);
-}
-
-
-.about_us {
-    color: #ddd;
-    height: auto;
-    width: fit-content;
-    background-color: red;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.reach_us {
-    color: #ddd;
-}
-
-footer {
-    margin-top: 100px;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 footer p {
@@ -504,6 +545,20 @@ footer a {
 footer h2 {
     width: fit-content;
     padding: 10px;
+}
+
+
+.about_us {
+    color: #ddd;
+    height: auto;
+    width: fit-content;
+    background-color: red;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.reach_us {
+    color: #ddd;
 }
 
 .burger_in_x_form #burger_line_2 {
@@ -523,6 +578,22 @@ footer h2 {
 }
 
 @media screen and (max-width: 800px) {
+
+    header {
+        background-image: none;
+    }
+
+    header section {
+        width: 100%;
+    }
+
+    header section h1 {
+        font-size: 2rem;
+    }
+
+    header div {
+        display: none;
+    }
 
     .main_nav {
         display: flex;
@@ -575,7 +646,7 @@ footer h2 {
         width: var(--burgerline_width);
         height: var(--burgerline_height);
         margin: var(--burgerline_margin);
-        background: darkgreen;
+        background: black;
         border-radius: 20%;
         transition: all 0.5s;
     }
@@ -594,8 +665,18 @@ footer h2 {
     }
     
 
-    #highlighted {
+    .highlighted {
         margin: 50px;
+    }
+
+    .highlighted h3 {
+        font-size: 1.5rem;
+        margin-right: 0px;
+    }
+
+    .highlighted p {
+        font-size: 0.9rem;
+        margin-right: 30px;
     }
     
     .news {
@@ -613,18 +694,18 @@ footer h2 {
     }
 
     .news_section img {
-        height: 200px;
+        height: 30vh;
         width: 100%;
     }
     
     .news_section {
         height: fit-content;
-        width: 230px;
+        width: 40vw;
         margin: 0px;
     }
 
     .news_section h3 {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .news_section p {
@@ -702,14 +783,18 @@ footer h2 {
     */
 
     .page_header {
-        font-size: 3rem;
-        padding: 100px;
+        font-size: 2.5rem;
+        padding-left: 30px;
     }
 
     .part_header {
-        font-size: 2.5rem;
+        justify-content: center;
+        font-size: 1.5rem;
+        width: 100%;
         margin-bottom: 30px;
         margin-top: 30px;
+        padding: 0px;
+        background-color: none;
     }
     
     #sign_up {
@@ -755,8 +840,14 @@ footer h2 {
     }
     
     #our_events {
-        height: 500px;
-        padding: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+        background-color: none;
+        padding: 0px;
     }
     
     
@@ -766,11 +857,17 @@ footer h2 {
         flex-direction: column;
         justify-content: space-between;
         padding-top: 100px;
+        padding: 0px;
+        margin: 0px;
     }
     
     #event_list a {
-        width: max-content;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
         height: 10px;
+        justify-content: center;
+        align-items: center;
     }
     
     .divider {
@@ -782,7 +879,7 @@ footer h2 {
     #help_us {
         display: flex;
         flex-direction: column;
-        padding: 100px;
+        padding: 50px;
         justify-content: center;
         align-items: center;
     }
@@ -790,9 +887,64 @@ footer h2 {
     #help_us a {
         background-color: var(--red_color);
         padding: 30px;
-        width: fit-content;
+        width: 100%;
         height: min-content;
         border-radius: 5px;
+    }
+
+
+    /*
+About
+    */
+
+    .about_part {
+        padding: 0px 50px 100px 50px;
+    }
+    
+    .about_part p {
+        margin-top: 50px;
+    }
+
+    .our_vision {
+        flex-direction: column;
+        padding-left: 50px;
+        padding-right: 50px;
+        width: 100%;
+        background-color: none;
+    }
+    
+    .our_vision_part {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 50px;
+        margin-top: 0px;
+        margin-right: 0px;
+        padding: 40px;
+    }
+    
+    
+    .our_vision_part p {
+        margin-top: 50px;
+        padding-left: 20px;
+    }
+
+
+    footer {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        height: fit-content;
+        padding-bottom: 100px;
+    }
+
+    footer h2 {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    footer a {
+        padding: 0px;
+        margin: 0px;
+        margin-top: 50px;
     }
 
 }
