@@ -89,7 +89,6 @@ nav {
 .main_nav a {
     height: fit-content;
     width: fit-content;
-    background-color: none;
 }
 
 .main_nav a img {
@@ -122,7 +121,7 @@ nav {
     background-size: cover;
     background-position: center center;
     height: 80vh;
-    width: all;
+
     background-color: rgb(41, 41, 41);
     margin: 50px 100px 50px 100px;
     position: relative;
@@ -230,7 +229,7 @@ nav {
     padding: 20px;
 }
 
-#more_news ul section {
+#more_news ul li {
     border-width: 0px 0px 0px 2px;
     border-color: var(--red_color);
     border-style: solid;
@@ -267,6 +266,8 @@ nav {
     align-items: center;
     justify-content: center;
     background-color:var(--red_color);
+    color: white;
+    text-shadow: 1px 1px 1px black;
     position: fixed;
     height: fit-content;
     width: fit-content;
@@ -321,7 +322,7 @@ För medlemmar
 }
 
 #for_members_highlighted{
-    background-image: url(../img/place_holder.jpg);
+    background-image: url(../img/meeting.jpg);
 }
 
 #our_events {
@@ -335,7 +336,6 @@ För medlemmar
     justify-content: space-between;
     align-items: center;
     padding-top: 100px;
-    background-color: none;
 }
 
 #event_list a {
@@ -552,7 +552,8 @@ footer h2 {
     color: #ddd;
     height: auto;
     width: fit-content;
-    background-color: red;
+    background-color: var(--red_color);
+    text-shadow: 1px 1px black;
     border-radius: 5px;
     padding: 10px;
 }
@@ -682,7 +683,7 @@ footer h2 {
     .news {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: fit-content fit-content 500px;
+        grid-template-rows: 300px 300px 500px;
         grid-template-areas:
         "se1 se2"
         "se3 se4"
@@ -721,7 +722,7 @@ footer h2 {
     }
 
     #more_news {
-        width: 80%;
+        width: 100%;
         height: fit-content;
     }
 
@@ -794,7 +795,6 @@ footer h2 {
         margin-bottom: 30px;
         margin-top: 30px;
         padding: 0px;
-        background-color: none;
     }
     
     #sign_up {
@@ -846,7 +846,6 @@ footer h2 {
         flex-direction: column;
         height: fit-content;
         width: 100%;
-        background-color: none;
         padding: 0px;
     }
     
@@ -910,7 +909,6 @@ About
         padding-left: 50px;
         padding-right: 50px;
         width: 100%;
-        background-color: none;
     }
     
     .our_vision_part {
